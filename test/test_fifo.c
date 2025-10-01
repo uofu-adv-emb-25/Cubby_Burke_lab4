@@ -134,6 +134,7 @@ void runner_thread (__unused void *args)
 int main (void)
 {
     stdio_init_all();
+    sleep_ms(15000);
     hard_assert(cyw43_arch_init() == PICO_OK);
     printf("Launching runner\n");
     xTaskCreate(runner_thread, "TestRunner",
